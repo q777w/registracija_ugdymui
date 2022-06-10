@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>registracija</title>
+	<style>
+		.formos {
+			width: 80%;
+			padding: 20px;
+			margin: 20px auto;
+			border: 1px solid grey;
+		}
+		label, input {
+		
+			width: 98%;
+			padding: 5px;
+			margin: 12px;
+		}
+	</style>
+</head>
+<body>
+<div class="rezultatas" th:text="${rezultatas}">
+</div>
+<div class="formos">
+<form method="post" th:action="@{/registruoti}">
+<label for="vardas">Vardas</label>
+<input type="text" id="vardas" name="vardas" value="">
+<label for="el_pastas">El. paštas</label>
+<input type="text" id="el_pastas" name="el_pastas" value="">
+<label for="vardas">Slaptažodis</label>
+<input type="text" id="slaptazodis" name="slaptazodis" value="">
+<input type="submit" name="registruotis" value="Registruotis">	
+</form>
+</div>
+</body>
+</html>
